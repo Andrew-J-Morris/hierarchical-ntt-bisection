@@ -9,7 +9,7 @@ Compile and run the C++20 test bench (covering N=5..8 ALU benchmarks and the 102
 g++ -O3 -std=c++20 N5_THRU_N8_AND_N1024_BENCHMARK.cpp -o benchmark && ./benchmark
 ```
 
-**Title:** Discrete Geometry First: Collapsing High-Dimensional Lattice Enumeration from O(r^N) to Quasi-Quadratic O(r^2 log_2 N log r)
+**Discrete Geometry First: Collapsing High-Dimensional Lattice Enumeration from O(r^N) to Quasi-Quadratic O(r^2 log_2 N log r)**
 
 For over two centuries, the standard approach to discrete lattice point enumeration has relied on continuous Euclidean tools—transcendental functions, Bessel expansions, modular forms, and floating-point approximations—projected onto integer grids[cite: 4, 15]. This approach frequently runs into boundary-vertex collisions, floating-point precision drift, and the classical exponential coordinate bottleneck[cite: 4, 17].
 
