@@ -4,12 +4,12 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Quickstart Compilation
-Compile and run the C++20 test bench (covering $N=5 \dots 8$ ALU benchmarks and the 1024D NTT test):
+Compile and run the C++20 test bench (covering N=5..8 ALU benchmarks and the 1024D NTT test):
 ```bash
 g++ -O3 -std=c++20 N5_THRU_N8_AND_N1024_BENCHMARK.cpp -o benchmark && ./benchmark
 ```
 
-**Title:** Discrete Geometry First: Collapsing High-Dimensional Lattice Enumeration from $\mathcal{O}(r^N)$ to Quasi-Quadratic $\mathcal{O}(r^2 \log_2 N \log r)$
+**Title:** Discrete Geometry First: Collapsing High-Dimensional Lattice Enumeration from O(r^N) to Quasi-Quadratic O(r^2 log_2 N log r)
 
 For over two centuries, the standard approach to discrete lattice point enumeration has relied on continuous Euclidean tools—transcendental functions, Bessel expansions, modular forms, and floating-point approximations—projected onto integer grids[cite: 4, 15]. This approach frequently runs into boundary-vertex collisions, floating-point precision drift, and the classical exponential coordinate bottleneck[cite: 4, 17].
 
@@ -18,31 +18,31 @@ Instead of forcing continuous calculus onto discrete space, I developed an integ
 The complete research suite consists of four preprints establishing the theoretical derivations, asymptotic complexity proofs, and hardware-native C++ reference implementations:
 
 *   **Paper I: The Orthotropic Boundary & Parity Foundations **
-    *   *Core Premise:* Couples orthotropic boundaries ($4r \pm 1$) to construct Diophantine parity constraints that mathematically prohibit boundary-vertex collisions[cite: 6, 15].
-    *   *Result:* Resolves boundary discrepancy and derives a deterministic, rational convergence envelope for discrete $\pi_d \in \mathbb{Q}$[cite: 6, 15].
+    *   *Core Premise:* Couples orthotropic boundaries 4r ± 1 to construct Diophantine parity constraints that mathematically prohibit boundary-vertex collisions[cite: 6, 15].
+    *   *Result:* Resolves boundary discrepancy and derives a deterministic, rational convergence envelope for discrete π_d ∈ ℚ[cite: 6, 15].
     *   *Zenodo DOI:* [10.5281/zenodo.22282210](https://doi.org/10.5281/zenodo.22282210)[cite: 4, 6] | *GitHub:* [Orthotropic-Lattice-Framework](https://github.com/Andrew-J-Morris/Orthotropic-Lattice-Framework)[cite: 6]
 
 *   **Paper II: Dimension-Pairing & Generalized Convolutions **
-    *   *Core Premise:* Decomposes 4D space as orthogonal planes ($\mathbb{Z}^4 \cong \mathbb{Z}^2 \times \mathbb{Z}^2$), reducing 4-space enumeration from $\mathcal{O}(r^4)$ to a single-pass 1D dot product in strict $\mathcal{O}(r^2)$ without floating-point operations[cite: 5, 8].
-    *   *Generalization:* Applies recursive bisection via Number Theoretic Transforms (NTT) in finite fields $\mathbb{Z}_p[t]$, collapsing $N$-dimensional ball enumeration to $\mathcal{O}(r^2 \log_2 N \log r)$[cite: 5, 8].
+    *   *Core Premise:* Decomposes 4D space as orthogonal planes (Z^4 ≅ Z^2 × Z^2), reducing 4-space enumeration from O(r^4) to a single-pass 1D dot product in strict O(r^2) without floating-point operations[cite: 5, 8].
+    *   *Generalization:* Applies recursive bisection via Number Theoretic Transforms (NTT) in finite fields Z_p[t], collapsing N-dimensional ball enumeration to O(r^2 log_2 N log r)[cite: 5, 8].
     *   *Zenodo DOI:* [10.5281/zenodo.22509388](https://doi.org/10.5281/zenodo.22509388)[cite: 5] | *GitHub:* [dimension-paired-lattice-framework](https://github.com/Andrew-J-Morris/dimension-paired-lattice-framework)[cite: 5]
 
 *   **Paper III: Odd-Dimension Slicing & Hardware Scaling **
-    *   *Core Premise:* Neutralizes the historical odd-dimension class-number barrier for $\mathbb{Z}^5$ and $\mathbb{Z}^7$ by slicing 1D axial profiles against precomputed even-dimensional hyperdisk profiles[cite: 9, 10].
-    *   *Empirical Scaling:* Verifies sequences against OEIS baselines (A000333–A000336), and benchmarks a 1024-dimensional hyperball in 1.6 ms on a single desktop core[cite: 9, 10].
+    *   *Core Premise:* Neutralizes the historical odd-dimension class-number barrier for Z^5 and Z^7 by slicing 1D axial profiles against precomputed even-dimensional hyperdisk profiles[cite: 9, 10].
+    *   *Empirical Scaling:* Verifies sequences against OEIS baselines (A000333–A000336), and benchmarks a 1024-dimensional R = 2896 hyperball (output = 831168560 (mod 998244353)) in 1561.833 ms on a single desktop core[cite: 9, 10].
     *   *Zenodo DOI:* [10.5281/zenodo.22691273](https://doi.org/10.5281/zenodo.22691273)[cite: 9] | *GitHub:* [Hierarchical-Dimension-Pairing-Framework](https://github.com/Andrew-J-Morris/Hierarchical-Dimension-Pairing-Framework)
 
 *   **Paper IV: Optimal $D_N$ Packings & Parity-Filtered Bisection**
-    *   *Core Premise:* Extends the bisection architecture beyond primitive grids to dense, non-orthogonal kissing-number lattices[cite: 3, 14]. By redefining geometries as parity-constrained sublattices of $\mathbb{Z}^N$ ($\sum x_i \equiv 0 \pmod 2$), internal coordinate staggering is fully absorbed into pre-filtered arrays[cite: 3, 14].
-    *   *Result:* Achieves hardware-native $\mathcal{O}(r^2)$ exact enumeration for Face-Centered Cubic ($D_3$), the 24-cell honeycomb ($D_4$), and the $D_8$ root lattice, verified bit-for-bit against OEIS A005875, A004011, and A004013[cite: 3].
+    *   *Core Premise:* Extends the bisection architecture beyond primitive grids to dense, non-orthogonal kissing-number lattices[cite: 3, 14]. By redefining geometries as parity-constrained sublattices of Z^N (∑ x_i ≡ 0 (mod 2)), internal coordinate staggering is fully absorbed into pre-filtered arrays[cite: 3, 14].
+    *   *Result:* Achieves hardware-native O(r^2) exact enumeration for Face-Centered Cubic (D_3), the 24-cell honeycomb (D_4), and the D_8 root lattice, verified bit-for-bit against OEIS A005875, A004011, and A004013[cite: 3].
     *   *Zenodo DOI:* [10.5281/zenodo.22824219](https://doi.org/10.5281/zenodo.22824219) | *GitHub:* [Parity-Filtered-Bisection-DN-Lattices](https://github.com/Andrew-J-Morris/Parity-Filtered-Bisection-DN-Lattices)
 
 **The Empirical Validation**
 
 The C++ implementations are designed as self-contained, reproducible test benches running exclusively on 64-bit integer ALUs with zero floating-point emulation:
-*   Resolving $246+$ million points in the 4D 24-cell honeycomb at $R=100$ in $2\text{ ms}$ on consumer hardware.
-*   Pushing the finite-field Number Theoretic Transform (NTT) bisection tree to its theoretical single-prime 2-adic ceiling ($R = 2896$, transform size $M = 2^{23}$), evaluating a $1024$-dimensional hyperball across an $8.38$-million-element ring in $1,561\text{ ms}$ on a single desktop core.
-*   Evaluating 7-dimensional bounding balls out to $R=5000$ to produce a bit-perfect 27-digit integer count for OEIS A055413.
+*   Resolving 246+ million points in the 4D 24-cell honeycomb at R=100 in 2 ms on consumer hardware.
+*   Pushing the finite-field Number Theoretic Transform (NTT) bisection tree to its theoretical single-prime 2-adic ceiling (R = 2896, transform size M = 2^23), evaluating a 1024-dimensional hyperball across an 8.38-million-element ring in 1,561 ms on a single desktop core.
+*   Evaluating 7-dimensional bounding hyperballs from R = 0..5000, culminating in a bit-perfect 27-digit lattice point count, thereby extending OEIS A055413 from R = 0..500 to R = 0..5000.
 
 All four preprints, source code, and benchmark suites are open-access. Feedback on the combinatorial proofs, algorithmic bounds, and hardware pipelining is welcome.
 
@@ -51,7 +51,7 @@ All four preprints, source code, and benchmark suites are open-access. Feedback 
 ### The Discrete Lattice Research Suite
 This repository is part of a 4-paper research program establishing hardware-native, integer-only lattice enumeration:
 
-1. **[Orthotropic-Lattice-Framework](https://github.com/Andrew-J-Morris/Orthotropic-Lattice-Framework):** 3D row-collapse, $4r \pm 1$ parity bounds, and rational $\pi_d \in \mathbb{Q}$ convergence. [[Zenodo DOI: 10.5281/zenodo.22282210](https://doi.org/10.5281/zenodo.22282210)]
-2. **[dimension-paired-lattice-framework](https://github.com/Andrew-J-Morris/dimension-paired-lattice-framework):** 4D orthogonal plane bisection ($\mathcal{O}(r^2)$) and generalized NTT convolution ($\mathcal{O}(r^2 \log_2 N \log r)$). [[Zenodo DOI: 10.5281/zenodo.22509388](https://doi.org/10.5281/zenodo.22509388)]
-3. **[Hierarchical-Dimension-Pairing-Framework](https://github.com/Andrew-J-Morris/Hierarchical-Dimension-Pairing-Framework):** 5D–8D odd-dimension slicing, OEIS A000333–A000336 verification, and $N=1024$ NTT scaling. [[Zenodo DOI: 10.5281/zenodo.22691273](https://doi.org/10.5281/zenodo.22691273)]
-4. **[Parity-Filtered-Bisection-DN-Lattices](https://github.com/Andrew-J-Morris/Parity-Filtered-Bisection-DN-Lattices):** Exact $\mathcal{O}(r^2)$ kissing-number root lattices ($D_3$ FCC, $D_4$ 24-cell, and $D_8$). [[Zenodo DOI: 10.5281/zenodo.22824219](https://doi.org/10.5281/zenodo.22824219)]
+1. **[Orthotropic-Lattice-Framework](https://github.com/Andrew-J-Morris/Orthotropic-Lattice-Framework):** 3D row-collapse, 4r ± 1 parity bounds, and rational π_d ∈ ℚ convergence. [[Zenodo DOI: 10.5281/zenodo.22282210](https://doi.org/10.5281/zenodo.22282210)]
+2. **[dimension-paired-lattice-framework](https://github.com/Andrew-J-Morris/dimension-paired-lattice-framework):** 4D orthogonal plane bisection (O(r^2)) and generalized NTT convolution (O(r^2 log_2 N log r)). [[Zenodo DOI: 10.5281/zenodo.22509388](https://doi.org/10.5281/zenodo.22509388)]
+3. **[Hierarchical-Dimension-Pairing-Framework](https://github.com/Andrew-J-Morris/Hierarchical-Dimension-Pairing-Framework):** 5D–8D odd-dimension slicing, OEIS A000333–A000336 verification, and N=1024 NTT scaling. [[Zenodo DOI: 10.5281/zenodo.22691273](https://doi.org/10.5281/zenodo.22691273)]
+4. **[Parity-Filtered-Bisection-DN-Lattices](https://github.com/Andrew-J-Morris/Parity-Filtered-Bisection-DN-Lattices):** Exact O(r^2) kissing-number root lattices (D_3 FCC, D_4 24-cell, and D_8). [[Zenodo DOI: 10.5281/zenodo.22824219](https://doi.org/10.5281/zenodo.22824219)]
