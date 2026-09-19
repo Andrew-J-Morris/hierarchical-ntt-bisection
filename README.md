@@ -17,17 +17,17 @@ Instead of forcing continuous calculus onto discrete space, I developed an integ
 
 The complete research suite consists of four preprints establishing the theoretical derivations, asymptotic complexity proofs, and hardware-native C++ reference implementations:
 
-*   **Paper I: The Orthotropic Boundary & Parity Foundations **
+*   **Paper I: The Orthotropic Boundary & Parity Foundations**
     *   *Core Premise:* Couples orthotropic boundaries 4r ± 1 to construct Diophantine parity constraints that mathematically prohibit boundary-vertex collisions[cite: 6, 15].
     *   *Result:* Resolves boundary discrepancy and derives a deterministic, rational convergence envelope for discrete π_d ∈ ℚ[cite: 6, 15].
     *   *Zenodo DOI:* [10.5281/zenodo.22282210](https://doi.org/10.5281/zenodo.22282210)[cite: 4, 6] | *GitHub:* [Orthotropic-Lattice-Framework](https://github.com/Andrew-J-Morris/Orthotropic-Lattice-Framework)[cite: 6]
 
-*   **Paper II: Dimension-Pairing & Generalized Convolutions **
+*   **Paper II: Dimension-Pairing & Generalized Convolutions**
     *   *Core Premise:* Decomposes 4D space as orthogonal planes (Z^4 ≅ Z^2 × Z^2), reducing 4-space enumeration from O(r^4) to a single-pass 1D dot product in strict O(r^2) without floating-point operations[cite: 5, 8].
     *   *Generalization:* Applies recursive bisection via Number Theoretic Transforms (NTT) in finite fields Z_p[t], collapsing N-dimensional ball enumeration to O(r^2 log_2 N log r)[cite: 5, 8].
     *   *Zenodo DOI:* [10.5281/zenodo.22509388](https://doi.org/10.5281/zenodo.22509388)[cite: 5] | *GitHub:* [dimension-paired-lattice-framework](https://github.com/Andrew-J-Morris/dimension-paired-lattice-framework)[cite: 5]
 
-*   **Paper III: Odd-Dimension Slicing & Hardware Scaling **
+*   **Paper III: Odd-Dimension Slicing & Hardware Scaling**
     *   *Core Premise:* Neutralizes the historical odd-dimension class-number barrier for Z^5 and Z^7 by slicing 1D axial profiles against precomputed even-dimensional hyperdisk profiles[cite: 9, 10].
     *   *Empirical Scaling:* Verifies sequences against OEIS baselines (A000333–A000336), and benchmarks a 1024-dimensional R = 2896 hyperball (output = 831168560 (mod 998244353)) in 1561.833 ms on a single desktop core[cite: 9, 10].
     *   *Zenodo DOI:* [10.5281/zenodo.22691273](https://doi.org/10.5281/zenodo.22691273)[cite: 9] | *GitHub:* [Hierarchical-Dimension-Pairing-Framework](https://github.com/Andrew-J-Morris/Hierarchical-Dimension-Pairing-Framework)
