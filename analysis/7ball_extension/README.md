@@ -16,7 +16,7 @@ Because high-dimensional lattice point counts up to large radial bounds are comp
 ## Key Empirical Findings from the Extension
 * **Rigid O(R⁵) Error Bounding:** Rolling log-log linear regression across bracketed radial intervals (R ∈ [100, 5000]) consistently locks the local bounding exponent α at **≈ 5.000**, confirming that the error growth remains tightly constrained and free of numerical divergence.
 * **The Parity Heartbeat (2.00 Units):** Spectral Fast Fourier Transform (FFT) analysis of the high-end extension isolates a dominant high-frequency harmonic at exactly **2.00 radial units**, representing the fundamental alternating parity boundary crossing as integer coordinates advance step-by-step.
-* **Macro-Scale Structural Resonances:** Long-range spectral peaks emerge at macro-scale intervals (~2,000 and ~4,000 units), capturing global geometric phasing where the smooth spherical boundary periodically aligns with the underlying auxetic integer grid.
+* **Macro-Scale Structural Resonances:** Long-range spectral peaks emerge at macro-scale intervals (~2,000 and ~4,000 units), capturing global geometric phasing where the smooth spherical boundary periodically aligns with the underlying integer grid.
 
 ## Usage
 Run the diagnostic suite directly from the terminal:
