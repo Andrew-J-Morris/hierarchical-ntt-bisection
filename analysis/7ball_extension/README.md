@@ -1,9 +1,9 @@
-# Multi-Dimensional Lattice Point Extension & Error Term Analysis (6D, 7D, 8D)
-**Datasets:** OEIS A055413 (7-Ball), A055414 (8-Ball), and 6-Ball (Extended to R = 10000)  
+# Multi-Dimensional Lattice Point Extension & Error Term Analysis (6D, 7D, 8D, 9D)
+**Datasets:** OEIS A055412 (6-Ball), A055413 (7-Ball), A055414 (8-Ball), A055415 (9-Ball) 
 **Framework:** High-Dimensional Discrete Geometry & Arbitrary-Precision Lattice Enumeration
 
 ## Overview
-This directory contains the pristine, newly extended integer sequence data for the 6-dimensional, 7-dimensional, and 8-dimensional ball point-counting problems, alongside a compiled C++ diagnostic suite designed to isolate and examine the behavior of the remainder error term E(R). 
+This directory contains the pristine, newly extended integer sequence data for the 6-dimensional, 7-dimensional, 8-dimensional, and 9-dimensional ball point-counting problems, alongside a compiled C++ diagnostic suite designed to isolate and examine the behavior of the remainder error term E(R). 
 
 Historically, high-dimensional lattice point counts up to large radial bounds have been severely restricted by computational complexity and 64-bit integer overflow limits. This dataset natively extends these series out to R = 10000 by bypassing standard spatial iteration entirely. The sequences were generated using an O(M log M) finite-field framework that executes natively on hardware Arithmetic Logic Units (ALUs) via a multi-prime Number Theoretic Transform (NTT) and 135-bit Chinese Remainder Theorem (CRT) reconstruction. 
 
