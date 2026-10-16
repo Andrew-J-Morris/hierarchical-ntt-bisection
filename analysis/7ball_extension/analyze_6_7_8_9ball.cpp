@@ -1,6 +1,6 @@
 /**
- * Unified Hyperball Lattice Residual & Spectral Suite (Dimensions 6, 7, 8)
- * Targets     : b055412.txt (6D), b055413_NTT.txt (7D), b055414.txt (8D)
+ * Unified Hyperball Lattice Residual & Spectral Suite (Dimensions 6, 7, 8, 9)
+ * Targets     : b055412.txt (6D), b055413_NTT.txt (7D), b055414.txt (8D), b055415.txt (9D)
  * Environment : Microsoft Visual Studio (C++17 or later)
  */
 
