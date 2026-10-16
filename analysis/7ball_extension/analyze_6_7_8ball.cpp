@@ -281,6 +281,7 @@ void run_analysis(const string& filename, int dim) {
 int main() {
     // Sequentially processes 6D and 8D datasets
     run_analysis("b055412.txt", 6);
+    run_analysis("b055413_NTT.txt", 7);
     run_analysis("b055414.txt", 8);
     return 0;
 }
